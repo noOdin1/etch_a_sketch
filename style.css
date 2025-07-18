@@ -2,7 +2,30 @@ html * {
   font-family: Roboto, san-serif;
 }
 
-.main .content {
+body {
+  /* padding-right: auto; */
+  /* padding-left: auto; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main.content {
   display: flex;
   flex-direction: column;
+  /* margin: 10px auto; */
+  /* text-align: center; */
+}
+
+.row {
+  height: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.col {
+  height: 8px;
+  width: 8px;
+  border: 1px solid MediumVioletRed;
 }
