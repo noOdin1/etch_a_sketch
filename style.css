@@ -2,7 +2,7 @@ html * {
   font-family: Roboto, san-serif;
 }
 
-body {
+.main .content {
   display: flex;
   flex-direction: column;
 }
