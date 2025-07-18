@@ -3,8 +3,6 @@ html * {
 }
 
 body {
-  /* padding-right: auto; */
-  /* padding-left: auto; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -13,8 +11,6 @@ body {
 .main.content {
   display: flex;
   flex-direction: column;
-  /* margin: 10px auto; */
-  /* text-align: center; */
 }
 
 .row {
