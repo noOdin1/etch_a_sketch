@@ -26,23 +26,12 @@ function easMouseOver(event) {
 
 function clickResizeArea(event) {
   const userInput = prompt("Enter the new area size: ", 16);
-  console.log("[clickResizedArea] userInput: " + userInput);
 
-  tmpRowChildLength = document.querySelector(".row_6").children.length;
-  console.log("[clickResizeArea] number of children: " + tmpRowChildLength);
-
-  // tmpRow.forEach((cell) => {
-  //   console.log("[clickResizeArea] cell: " + cell.classList);
-  // });
-
-  var tmpRow = document.querySelector(".row_3");
   removeCells(tmpRow);
   return;
 }
 
 function removeCells(nodeForProcessing) {
-  // let tmpRow = document.querySelector(".row_6");
-
   // source: https://www.geeksforgeeks.org/javascript/remove-all-the-child-elements-of-a-dom-node-in-javascript/
   let child = nodeForProcessing.lastElementChild;
   while (child) {
