@@ -5,6 +5,7 @@ function easMouseOver(event) {
     if (event.target.classList.contains("black")) {
       event.target.classList.remove("black");
     } else {
+    if (!event.target.classList.contains("black")) {
       event.target.classList.add("black");
     }
   }
