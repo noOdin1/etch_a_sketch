@@ -1,11 +1,7 @@
 function easMouseOver(event) {
-  console.log("[" + easMouseOver.name + "] event: " + event.target.classList);
   // console.log("[" + easMouseOver.name + "] event: " + event.target.classList);
   // sets up an either or condition
   if (event.target.classList.contains("col")) {
-    if (event.target.classList.contains("black")) {
-      event.target.classList.remove("black");
-    } else {
     if (!event.target.classList.contains("black")) {
       event.target.classList.add("black");
     }
