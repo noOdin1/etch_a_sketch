@@ -13,7 +13,10 @@ function createDiv() {
     for (let j = 0; j < drawingSize; j++) {
       var tmpColDiv = document.createElement("div");
       tmpColDiv.classList.add("col_" + j);
+      let tmpString = "row_" + i + "_col_" + j;
+      tmpColDiv.classList.add(tmpString);
       tmpColDiv.classList.add("col");
+      tmpColDiv.setAttribute("id", tmpString);
       tmpRowDiv.appendChild(tmpColDiv);
     }
   }
