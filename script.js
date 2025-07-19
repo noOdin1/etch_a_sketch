@@ -36,8 +36,22 @@ function clickResizeArea(event) {
   //   console.log("[clickResizeArea] cell: " + cell.classList);
   // });
 
+  var tmpRow = document.querySelector(".row_3");
+  removeRowCells(tmpRow);
   return;
 }
+
+function removeRowCells(nodeForProcessing) {
+  // let tmpRow = document.querySelector(".row_6");
+
+  // source: https://www.geeksforgeeks.org/javascript/remove-all-the-child-elements-of-a-dom-node-in-javascript/
+  let child = nodeForProcessing.lastElementChild;
+  while (child) {
+    nodeForProcessing.removeChild(child);
+    child = nodeForProcessing.lastElementChild;
+  }
+}
+
 function createDiv(sketchArea) {
   let mainDiv = document.querySelector(".main.content");
 
