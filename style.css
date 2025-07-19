@@ -24,7 +24,8 @@ body {
 }
 
 .col {
-  height: 8px;
+  /* height: 8px; */
+  height: 100%;
   width: 8px;
   /* border: 1px solid MediumVioletRed; */
 }
