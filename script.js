@@ -1,13 +1,9 @@
 function easMouseOver(event) {
-  // console.log("[" + easMouseOver.name + "] event: " + event.target.classList);
-  // sets up an either or condition
   if (event.target.classList.contains("col")) {
     if (!event.target.classList.contains("black")) {
       event.target.classList.add("black");
     }
   }
-  // make the background white
-  // if (event.ctrlKey) {
   if (event.shiftKey) {
     console.log(
       "[" +
@@ -18,7 +14,6 @@ function easMouseOver(event) {
     if (event.target.classList.contains("col")) {
       if (event.target.classList.contains("black")) {
         event.target.classList.remove("black");
-        // event.target.classList.add("black");
       }
     }
   }
