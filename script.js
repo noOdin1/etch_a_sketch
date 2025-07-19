@@ -1,3 +1,7 @@
+function easMouseOver(event) {
+  console.log("[mouseOver] event: " + event.target.classList);
+}
+
 function createDiv() {
   let mainDiv = document.querySelector(".main.content");
 
@@ -12,12 +16,17 @@ function createDiv() {
     mainDiv.appendChild(tmpRowDiv);
     for (let j = 0; j < drawingSize; j++) {
       var tmpColDiv = document.createElement("div");
-      tmpColDiv.classList.add("col_" + j);
       let tmpString = "row_" + i + "_col_" + j;
       tmpColDiv.classList.add(tmpString);
       tmpColDiv.classList.add("col");
       tmpColDiv.setAttribute("id", tmpString);
       tmpRowDiv.appendChild(tmpColDiv);
+      tmpRowDiv.addEventListener("mouseover", easMouseOver);
+      // tmpRowDiv.addEventListener("mouseover", (event) => {
+      //   console.log(
+      //     "[createDiv:anonymous] event.target.id: " + event.target.id,
+      //   );
+      // });
     }
   }
 }
