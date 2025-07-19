@@ -26,4 +26,9 @@ body {
 .col {
   height: 8px;
   width: 8px;
+  /* border: 1px solid MediumVioletRed; */
+}
+
+.black {
+  background: black;
 }
