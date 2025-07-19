@@ -48,5 +48,5 @@ function createDiv() {
   }
 }
 
-const drawingSize = 16;
 createDiv();
+var drawingSize = 16; // change to allow for sketch resize
