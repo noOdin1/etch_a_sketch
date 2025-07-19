@@ -25,6 +25,19 @@ function easMouseOver(event) {
 }
 
 function createDiv() {
+function clickResizeArea(event) {
+  const userInput = prompt("Enter the new area size: ", 16);
+  console.log("[clickResizedArea] userInput: " + userInput);
+
+  tmpRowChildLength = document.querySelector(".row_6").children.length;
+  console.log("[clickResizeArea] number of children: " + tmpRowChildLength);
+
+  // tmpRow.forEach((cell) => {
+  //   console.log("[clickResizeArea] cell: " + cell.classList);
+  // });
+
+  return;
+}
 function createDiv(sketchArea) {
   let mainDiv = document.querySelector(".main.content");
 
@@ -52,4 +65,7 @@ function createDiv(sketchArea) {
 }
 
 var drawingSize = 16; // change to allow for sketch resize
+const resizeBtn = document.querySelector("button");
+resizeBtn.addEventListener("click", clickResizeArea);
+
 createDiv(drawingSize);
