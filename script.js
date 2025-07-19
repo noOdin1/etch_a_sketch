@@ -36,11 +36,11 @@ function clickResizeArea(event) {
   // });
 
   var tmpRow = document.querySelector(".row_3");
-  removeRowCells(tmpRow);
+  removeCells(tmpRow);
   return;
 }
 
-function removeRowCells(nodeForProcessing) {
+function removeCells(nodeForProcessing) {
   // let tmpRow = document.querySelector(".row_6");
 
   // source: https://www.geeksforgeeks.org/javascript/remove-all-the-child-elements-of-a-dom-node-in-javascript/
