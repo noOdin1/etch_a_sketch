@@ -11,6 +11,10 @@ body {
   padding-bottom: auto;
 }
 
+.container.button {
+  margin: 20px;
+}
+
 .main.content {
   display: flex;
   flex-direction: column;
