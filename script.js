@@ -1,5 +1,13 @@
 function easMouseOver(event) {
-  console.log("[mouseOver] event: " + event.target.classList);
+  console.log("[" + easMouseOver.name + "] event: " + event.target.classList);
+  // sets up an either or condition
+  if (event.target.classList.contains("col")) {
+    if (event.target.classList.contains("black")) {
+      event.target.classList.remove("black");
+    } else {
+      event.target.classList.add("black");
+    }
+  }
 }
 
 function createDiv() {
@@ -22,11 +30,6 @@ function createDiv() {
       tmpColDiv.setAttribute("id", tmpString);
       tmpRowDiv.appendChild(tmpColDiv);
       tmpRowDiv.addEventListener("mouseover", easMouseOver);
-      // tmpRowDiv.addEventListener("mouseover", (event) => {
-      //   console.log(
-      //     "[createDiv:anonymous] event.target.id: " + event.target.id,
-      //   );
-      // });
     }
   }
 }
