@@ -6,6 +6,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100%;
+  padding-top: auto;
+  padding-bottom: auto;
 }
 
 .main.content {
@@ -23,5 +26,4 @@ body {
 .col {
   height: 8px;
   width: 8px;
-  border: 1px solid MediumVioletRed;
 }
