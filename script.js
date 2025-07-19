@@ -25,18 +25,21 @@ function easMouseOver(event) {
 }
 
 function createDiv() {
+function createDiv(sketchArea) {
   let mainDiv = document.querySelector(".main.content");
 
   // Strategy:
   //  Create 16 rows of div containers that contain 16 cells
   //  of divs align in a row
   for (let i = 0; i < drawingSize; i++) {
+  for (let i = 0; i < sketchArea; i++) {
     // here is where we create the divs
     var tmpRowDiv = document.createElement("div");
     tmpRowDiv.classList.add("row_" + i);
     tmpRowDiv.classList.add("row");
     mainDiv.appendChild(tmpRowDiv);
     for (let j = 0; j < drawingSize; j++) {
+    for (let j = 0; j < sketchArea; j++) {
       var tmpColDiv = document.createElement("div");
       let tmpString = "row_" + i + "_col_" + j;
       tmpColDiv.classList.add(tmpString);
@@ -48,5 +51,5 @@ function createDiv() {
   }
 }
 
-createDiv();
 var drawingSize = 16; // change to allow for sketch resize
+createDiv(drawingSize);
