@@ -26,6 +26,12 @@ function easMouseOver(event) {
 
 function clickResizeArea(event) {
   const userInput = prompt("Enter the new area size: ", 16);
+  if (userInput > 100) {
+    userInput = 100;
+  }
+  if (userInput < 0) {
+    userInput = 16;
+  }
 
   removeCells(tmpRow);
   return;
