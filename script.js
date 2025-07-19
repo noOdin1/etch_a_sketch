@@ -8,6 +8,22 @@ function easMouseOver(event) {
       event.target.classList.add("black");
     }
   }
+  // make the background white
+  // if (event.ctrlKey) {
+  if (event.shiftKey) {
+    console.log(
+      "[" +
+        easMouseOver.name +
+        "] shift key detected, event: " +
+        event.target.classList,
+    );
+    if (event.target.classList.contains("col")) {
+      if (event.target.classList.contains("black")) {
+        event.target.classList.remove("black");
+        // event.target.classList.add("black");
+      }
+    }
+  }
 }
 
 function createDiv() {
