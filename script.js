@@ -82,12 +82,15 @@ function createDiv(sketchArea) {
     var tmpRowDiv = document.createElement("div");
     tmpRowDiv.classList.add("row_" + i);
     tmpRowDiv.classList.add("row");
+    // tmpRowDiv.style.height = "60px";
+    tmpRowDiv.style.height = `${cellSize}px`;
     mainDiv.appendChild(tmpRowDiv);
     for (let j = 0; j < sketchArea; j++) {
       var tmpColDiv = document.createElement("div");
       let tmpString = "row_" + i + "_col_" + j;
       tmpColDiv.classList.add(tmpString);
       tmpColDiv.classList.add("col");
+      tmpColDiv.style.width = `${cellSize}px`;
       tmpColDiv.setAttribute("id", tmpString);
       tmpRowDiv.appendChild(tmpColDiv);
       tmpRowDiv.addEventListener("mouseover", easMouseOver);
