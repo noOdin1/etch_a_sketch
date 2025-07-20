@@ -107,6 +107,8 @@ function createDiv(sketchArea) {
   }
 }
 
+const modeInfoPreTxt = "Mode: ";
+const cellSizeInfoPreTxt = "Cells: ";
 var currentMode = "normal";
 var drawingSize = 16; // change to allow for sketch resize
 const resizeBtn = document.querySelector("button");
