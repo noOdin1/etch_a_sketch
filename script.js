@@ -28,8 +28,6 @@ function clickResizeArea(event) {
     userInput = 16;
   }
 
-  // calculateCellSize(userInput);
-
   var tmpRow = document.querySelector(".main");
   removeCells(tmpRow);
   createDiv(userInput);
