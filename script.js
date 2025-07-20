@@ -19,6 +19,12 @@ function easMouseOver(event) {
   }
 }
 
+function easMouseClick(event) {
+  let keyEvent = event.button;
+  console.log("[easMouseClick] keyEvent: " + keyEvent);
+  return;
+}
+
 function clickResizeArea(event) {
   const userInput = prompt("Enter the new area size: ", 16);
   if (userInput > 100) {
@@ -87,5 +93,6 @@ function createDiv(sketchArea) {
 var drawingSize = 16; // change to allow for sketch resize
 const resizeBtn = document.querySelector("button");
 resizeBtn.addEventListener("click", clickResizeArea);
+document.addEventListener("click", easMouseClick);
 
 createDiv(drawingSize);
