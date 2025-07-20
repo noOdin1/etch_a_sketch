@@ -31,7 +31,6 @@ function clickResizeArea(event) {
   var tmpRow = document.querySelector(".main");
   removeCells(tmpRow);
   createDiv(userInput);
-  return;
 }
 
 function removeCells(nodeForProcessing) {
