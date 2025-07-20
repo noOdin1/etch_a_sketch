@@ -74,7 +74,6 @@ function createDiv(sketchArea) {
     var tmpRowDiv = document.createElement("div");
     tmpRowDiv.classList.add("row_" + i);
     tmpRowDiv.classList.add("row");
-    // tmpRowDiv.style.height = "60px";
     tmpRowDiv.style.height = `${cellSize}px`;
     mainDiv.appendChild(tmpRowDiv);
     for (let j = 0; j < sketchArea; j++) {
