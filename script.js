@@ -24,6 +24,7 @@ function randomRGBAVal() {
   let greenVal = Math.floor(Match.random() * 256);
   let blueVal = Math.floor(Match.random() * 256);
   var rgbaVal = "rgba(" + redVal + "," + greenVal + "," + blueVal + ",1.0)";
+
   return rgbaVal;
 }
 
