@@ -96,7 +96,6 @@ function createDiv(sketchArea) {
       tmpRowDiv.addEventListener("mouseover", easMouseOver);
     }
   }
-  // setCellAttributes(calculateCellSize(sketchArea));
 }
 
 var drawingSize = 16; // change to allow for sketch resize
