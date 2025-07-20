@@ -46,10 +46,6 @@ function easMouseClick(event) {
     modeInfo.textContent = modeInfoPreTxt + currentMode;
   }
 
-  let keyEvent = event.button;
-  console.log("[easMouseClick] keyEvent: " + keyEvent);
-
-  console.log("[easMouseClick] mode: " + currentMode);
   return;
 }
 
