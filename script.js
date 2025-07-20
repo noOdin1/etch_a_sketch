@@ -28,7 +28,7 @@ function clickResizeArea(event) {
     userInput = 16;
   }
 
-  calculateCellSize(userInput);
+  // calculateCellSize(userInput);
 
   var tmpRow = document.querySelector(".main");
   removeCells(tmpRow);
@@ -70,6 +70,10 @@ function removeCells(nodeForProcessing) {
 function createDiv(sketchArea) {
   let mainDiv = document.querySelector(".main.content");
 
+  cellSize = calculateCellSize(sketchArea).toString();
+  console.log(
+    "[createDiv] cellSize: " + cellSize + ", type of " + typeof cellSize,
+  );
   // Strategy:
   //  Create 16 rows of div containers that contain 16 cells
   //  of divs align in a row
