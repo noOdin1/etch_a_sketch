@@ -39,8 +39,8 @@ function setCellAttributes(size) {
   let rowElement = document.querySelector(".row");
   let colElement = document.querySelector(".col");
 
-  rowElement.style.height(size);
-  colElement.style.width(size);
+  rowElement.style.height = size;
+  colElement.style.width = size;
 }
 
 // Function to calculate the cell size. The cells will be square.
