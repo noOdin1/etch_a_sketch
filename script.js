@@ -22,14 +22,22 @@ function easMouseOver(event) {
 function easMouseClick(event) {
   // to detect mouse 'right' click, use:
   //   document.addEventListener("contextmenu", callbackFunction);
+  if (event.target.classList.contains("col")) {
+    console.log("[easMouseClick] You've click inside the drawing area");
+  }
+  // User can change the mode when left clicking outside the drawing area
+  if (!event.target.classList.contains("col")) {
+    console.log("[easMouseClick] You've click outside the drawing area");
+    if (currentMode == "normal") {
+      currentMode = "random";
+    } else {
+      currentMode = "normal";
+    }
+  }
+
   let keyEvent = event.button;
   console.log("[easMouseClick] keyEvent: " + keyEvent);
 
-  if (currentMode == "normal") {
-    currentMode = "random";
-  } else {
-    currentMode = "normal";
-  }
   console.log("[easMouseClick] mode: " + currentMode);
   return;
 }
