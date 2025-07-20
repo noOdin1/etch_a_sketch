@@ -27,7 +27,10 @@ function easMouseClick(event) {
 
   if (currentMode == "normal") {
     currentMode = "random";
+  } else {
+    currentMode = "normal";
   }
+  console.log("[easMouseClick] mode: " + currentMode);
   return;
 }
 
