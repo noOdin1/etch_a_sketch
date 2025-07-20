@@ -20,8 +20,14 @@ function easMouseOver(event) {
 }
 
 function easMouseClick(event) {
+  // to detect mouse 'right' click, use:
+  //   document.addEventListener("contextmenu", callbackFunction);
   let keyEvent = event.button;
   console.log("[easMouseClick] keyEvent: " + keyEvent);
+
+  if (currentMode == "normal") {
+    currentMode = "random";
+  }
   return;
 }
 
@@ -90,6 +96,7 @@ function createDiv(sketchArea) {
   }
 }
 
+var currentMode = "normal";
 var drawingSize = 16; // change to allow for sketch resize
 const resizeBtn = document.querySelector("button");
 resizeBtn.addEventListener("click", clickResizeArea);
