@@ -28,9 +28,26 @@ function clickResizeArea(event) {
     userInput = 16;
   }
 
+  calculateCellSize(userInput);
+
   var tmpRow = document.querySelector(".main");
   removeCells(tmpRow);
   createDiv(userInput);
+}
+
+// Function to calculate the cell size. The cells will be square.
+// The value of the witdth and height should be calculated against
+// how many cells are to be generated for a 960px area. The number of
+// cells is obtained from the user.
+function calculateCellSize(numOfCells) {
+  let cellWidth = Math.floor(960 / numOfCells);
+  console.log(
+    "[calculateCellSize] numOfCells: " +
+      numOfCells +
+      ", cellWidth: " +
+      cellWidth,
+  );
+  return cellWidth;
 }
 
 function removeCells(nodeForProcessing) {
