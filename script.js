@@ -35,14 +35,6 @@ function clickResizeArea(event) {
   createDiv(userInput);
 }
 
-function setCellAttributes(size) {
-  let rowElement = document.querySelector(".row");
-  let colElement = document.querySelector(".col");
-
-  rowElement.style.height = size;
-  colElement.style.width = size;
-}
-
 // Function to calculate the cell size. The cells will be square.
 // The value of the witdth and height should be calculated against
 // how many cells are to be generated for a 960px area. The number of
