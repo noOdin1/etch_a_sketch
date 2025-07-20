@@ -2,6 +2,8 @@ function easMouseOver(event) {
   if (event.target.classList.contains("col")) {
     if (!event.target.classList.contains("black")) {
       event.target.classList.add("black");
+    } else if (currentMode == "random") {
+      event.target.style.backgroundColor = randomRGBAVal();
     }
   }
   if (event.shiftKey) {
@@ -20,9 +22,9 @@ function easMouseOver(event) {
 }
 
 function randomRGBAVal() {
-  let redVal = Math.floor(Match.random() * 256);
-  let greenVal = Math.floor(Match.random() * 256);
-  let blueVal = Math.floor(Match.random() * 256);
+  let redVal = Math.floor(Math.random() * 256);
+  let greenVal = Math.floor(Math.random() * 256);
+  let blueVal = Math.floor(Math.random() * 256);
   var rgbaVal = "rgba(" + redVal + "," + greenVal + "," + blueVal + ",1.0)";
 
   return rgbaVal;
