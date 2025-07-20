@@ -33,6 +33,8 @@ function easMouseClick(event) {
     } else {
       currentMode = "normal";
     }
+    modeInfo = document.querySelector("#modeTxt");
+    modeInfo.textContent = modeInfoPreTxt + currentMode;
   }
 
   let keyEvent = event.button;
@@ -105,10 +107,15 @@ function createDiv(sketchArea) {
       tmpRowDiv.addEventListener("mouseover", easMouseOver);
     }
   }
+  cellSizeInfo = document.querySelector("#cellSizeTxt");
+  cellSizeInfo.textContent = cellSizeInfoPreTxt + sketchArea * sketchArea;
+
+  modeInfo = document.querySelector("#modeTxt");
+  modeInfo.textContent = modeInfoPreTxt + currentMode;
 }
 
 const modeInfoPreTxt = "Mode: ";
-const cellSizeInfoPreTxt = "Cells: ";
+const cellSizeInfoPreTxt = "Number of Cells: ";
 var currentMode = "normal";
 var drawingSize = 16; // change to allow for sketch resize
 const resizeBtn = document.querySelector("button");
