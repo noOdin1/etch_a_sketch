@@ -60,6 +60,7 @@ function removeCells(nodeForProcessing) {
 function createDiv(sketchArea) {
   let mainDiv = document.querySelector(".main.content");
 
+  cellSize = calculateCellSize(sketchArea).toString();
   // Strategy:
   //  Create 16 rows of div containers that contain 16 cells
   //  of divs align in a row
