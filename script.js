@@ -97,12 +97,14 @@ function clickResizeArea(event) {
 // cells is obtained from the user.
 function calculateCellSize(numOfCells) {
   let cellWidth = Math.floor(960 / numOfCells);
-  console.log(
-    "[calculateCellSize] numOfCells: " +
-      numOfCells +
-      ", cellWidth: " +
-      cellWidth,
-  );
+  if (debug) {
+    console.log(
+      "[calculateCellSize] numOfCells: " +
+        numOfCells +
+        ", cellWidth: " +
+        cellWidth,
+    );
+  }
   return cellWidth;
 }
 
