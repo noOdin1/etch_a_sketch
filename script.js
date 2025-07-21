@@ -60,7 +60,9 @@ function easMouseClick(event) {
   // to detect mouse 'right' click, use:
   //   document.addEventListener("contextmenu", callbackFunction);
   if (event.target.classList.contains("col")) {
-    console.log("[easMouseClick] You've click inside the drawing area");
+    if (debug) {
+      console.log("[easMouseClick] You've click inside the drawing area");
+    }
     // Only apply darken effect to rgb cells
     if (event.target.classList.contains("random")) {
       // soln src: https://stackoverflow.com/questions/76801065/how-can-i-implement-a-progressive-darkening-effect
@@ -75,7 +77,9 @@ function easMouseClick(event) {
   }
   // User can change the mode when left clicking outside the drawing area
   if (!event.target.classList.contains("col")) {
-    console.log("[easMouseClick] You've click outside the drawing area");
+    if (debug) {
+      console.log("[easMouseClick] You've click outside the drawing area");
+    }
     if (currentMode == "normal") {
       currentMode = "random";
     } else {
