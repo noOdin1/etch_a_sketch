@@ -1,6 +1,9 @@
 function easMouseOver(event) {
   // Separate between "normal" and "random" modes first, then
   // determine the actions to perform on the cell.
+
+  // change the color of the cell from white or random rgb colors
+  // to black
   if (currentMode == "normal") {
     if (!event.target.classList.contains("black")) {
       event.target.classList.add("black");
@@ -11,6 +14,8 @@ function easMouseOver(event) {
     event.target.style.backgroundColor = "";
   }
 
+  // change the color of the cell from white or black to
+  // random rgb color
   if (currentMode == "random") {
     if (event.target.classList.contains("black")) {
       event.target.classList.remove("black");
