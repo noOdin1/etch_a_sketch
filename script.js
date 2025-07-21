@@ -14,6 +14,8 @@ function easMouseOver(event) {
     event.target.style.backgroundColor = randomRGBAVal();
   }
 
+  // This condition removes colors from the cell and class name,
+  // effectively clears the cell
   if (event.shiftKey) {
     console.log(
       "[" +
@@ -23,6 +25,10 @@ function easMouseOver(event) {
     );
     if (event.target.classList.contains("black")) {
       event.target.classList.remove("black");
+    }
+    if (event.target.classList.contains("random")) {
+      event.target.classList.remove("random");
+      event.target.style.backgroundColor = "";
     }
   }
 }
