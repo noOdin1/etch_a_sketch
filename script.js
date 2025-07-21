@@ -43,6 +43,8 @@ function easMouseOver(event) {
     if (event.target.classList.contains("random")) {
       event.target.classList.remove("random");
       event.target.style.backgroundColor = "";
+      event.target.style.filter = `brightness(100%)`; // reset the brightness filter
+      event.target.dataset.brightness = "100";
     }
   }
 }
