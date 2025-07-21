@@ -1,18 +1,9 @@
 function easMouseOver(event) {
-  // if (event.target.classList.contains("col")) {
-  //   if (!event.target.classList.contains("black")) {
-  //     event.target.classList.add("black");
-  //   } else if (currentMode == "random") {
-  //     event.target.style.backgroundColor = randomRGBAVal();
-  //   }
-  // }
   // Separate between "normal" and "random" modes first, then
   // determine the actions to perform on the cell.
   if (currentMode == "normal") {
-    if (event.target.classList.contains("col")) {
-      if (!event.target.classList.contains("black")) {
-        event.target.classList.add("black");
-      }
+    if (!event.target.classList.contains("black")) {
+      event.target.classList.add("black");
     }
   }
 
@@ -30,10 +21,8 @@ function easMouseOver(event) {
         "] shift key detected, event: " +
         event.target.classList,
     );
-    if (event.target.classList.contains("col")) {
-      if (event.target.classList.contains("black")) {
-        event.target.classList.remove("black");
-      }
+    if (event.target.classList.contains("black")) {
+      event.target.classList.remove("black");
     }
   }
 }
