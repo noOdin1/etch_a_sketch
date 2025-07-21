@@ -1,11 +1,28 @@
 function easMouseOver(event) {
-  if (event.target.classList.contains("col")) {
-    if (!event.target.classList.contains("black")) {
-      event.target.classList.add("black");
-    } else if (currentMode == "random") {
-      event.target.style.backgroundColor = randomRGBAVal();
+  // if (event.target.classList.contains("col")) {
+  //   if (!event.target.classList.contains("black")) {
+  //     event.target.classList.add("black");
+  //   } else if (currentMode == "random") {
+  //     event.target.style.backgroundColor = randomRGBAVal();
+  //   }
+  // }
+  // Separate between "normal" and "random" modes first, then
+  // determine the actions to perform on the cell.
+  if (currentMode == "normal") {
+    if (event.target.classList.contains("col")) {
+      if (!event.target.classList.contains("black")) {
+        event.target.classList.add("black");
+      }
     }
   }
+
+  if (currentMode == "random") {
+    if (event.target.classList.contains("black")) {
+      event.target.classList.remove("black");
+    }
+    event.target.style.backgroundColor = randomRGBAVal();
+  }
+
   if (event.shiftKey) {
     console.log(
       "[" +
