@@ -5,11 +5,18 @@ function easMouseOver(event) {
     if (!event.target.classList.contains("black")) {
       event.target.classList.add("black");
     }
+    if (event.target.classList.contains("random")) {
+      event.target.classList.remove("random");
+    }
+    event.target.style.backgroundColor = "";
   }
 
   if (currentMode == "random") {
     if (event.target.classList.contains("black")) {
       event.target.classList.remove("black");
+    }
+    if (!event.target.classList.contains("random")) {
+      event.target.classList.add("random");
     }
     event.target.style.backgroundColor = randomRGBAVal();
   }
