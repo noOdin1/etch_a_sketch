@@ -29,12 +29,14 @@ function easMouseOver(event) {
   // This condition removes colors from the cell and class name,
   // effectively clears the cell
   if (event.shiftKey) {
-    console.log(
-      "[" +
-        easMouseOver.name +
-        "] shift key detected, event: " +
-        event.target.classList,
-    );
+    if (debug) {
+      console.log(
+        "[" +
+          easMouseOver.name +
+          "] shift key detected, event: " +
+          event.target.classList,
+      );
+    }
     if (event.target.classList.contains("black")) {
       event.target.classList.remove("black");
     }
@@ -145,6 +147,7 @@ function createDiv(sketchArea) {
   modeInfo.textContent = modeInfoPreTxt + currentMode;
 }
 
+const debug = false;
 const modeInfoPreTxt = "Mode: ";
 const cellSizeInfoPreTxt = "Number of Cells: ";
 var currentMode = "normal";
