@@ -22,8 +22,8 @@ function easMouseOver(event) {
     }
     if (!event.target.classList.contains("random")) {
       event.target.classList.add("random");
+      event.target.style.backgroundColor = randomRGBAVal();
     }
-    event.target.style.backgroundColor = randomRGBAVal();
   }
 
   // This condition removes colors from the cell and class name,
